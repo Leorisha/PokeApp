@@ -14,10 +14,10 @@ class PokemonListModel: ObservableObject {
   var api: PokeAPIClient = PokeAPIClient()
 
   @MainActor
-  func fetchPokemons() {
+  func fetchPokemons(_ fetchMode: FetchMode = .next) {
     Task {
       do {
-        let pokemonList = try await api.fetchPokemonList(self.next)
+        let pokemonList = try await api.fetchPokemonList(fetchMode == .next ? self.next : self.previous)
         self.pokemons = pokemonList.results
         self.next = pokemonList.next ?? ""
         self.previous = pokemonList.previous ?? ""
@@ -26,5 +26,10 @@ class PokemonListModel: ObservableObject {
         print("Error fetching Pokemon list: \(error)")
       }
     }
+  }
+
+  enum FetchMode {
+    case next
+    case previous
   }
 }

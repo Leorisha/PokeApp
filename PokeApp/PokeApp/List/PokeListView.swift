@@ -12,9 +12,28 @@ struct PokeListView: View {
 
   var body: some View {
     NavigationView {
-      ScrollView {
-        ForEach(viewModel.pokemons, id: \.self) { pokemon in
-          PokeListCell(url: pokemon.url ?? "")
+      VStack {
+        ScrollView {
+          ForEach(viewModel.pokemons, id: \.self) { pokemon in
+            PokeListCell(url: pokemon.url ?? "")
+          }
+        }
+        .safeAreaInset(edge: .bottom) {
+          HStack {
+            Button {
+              viewModel.fetchPokemons(.previous)
+            } label: {
+              Text("Previous")
+            }
+            Spacer()
+            Button {
+              viewModel.fetchPokemons(.next)
+            } label: {
+              Text("Next")
+            }
+          }
+          .padding()
+          .background(Color.white)
         }
       }
       .navigationBarTitle("Pokemons")
