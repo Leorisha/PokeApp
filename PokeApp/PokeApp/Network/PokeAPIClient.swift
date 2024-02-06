@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct PokeAPIClient {
+class PokeAPIClient: ObservableObject {
 
   static var baseURL: String = "https://pokeapi.co/api/v2/pokemon"
 
@@ -36,3 +36,15 @@ struct PokeAPIClient {
     }
   }
 }
+
+private struct PokeAPIClientKey: EnvironmentKey {
+    static let defaultValue: PokeAPIClient = PokeAPIClient()
+}
+
+extension EnvironmentValues {
+    var pokeAPIClient: PokeAPIClient {
+        get { self[PokeAPIClientKey.self] }
+        set { self[PokeAPIClientKey.self] = newValue }
+    }
+}
+

@@ -10,9 +10,11 @@ import SwiftUI
 @main
 struct PokeAppApp: App {
 
-    var body: some Scene {
-        WindowGroup {
-          PokeListView()
-        }
+  let apiClient = PokeAPIClient()
+  var body: some Scene {
+    WindowGroup {
+      PokeListView()
+        .environmentObject(apiClient)
     }
+  }
 }

@@ -8,13 +8,13 @@
 import SwiftUI
 
 class PokemonListModel: ObservableObject {
+  
   @Published var pokemons: [Pokemon] = []
   var next = PokeAPIClient.baseURL+"?limit=20&offset=0"
   var previous = ""
-  var api: PokeAPIClient = PokeAPIClient()
 
   @MainActor
-  func fetchPokemons(_ fetchMode: FetchMode = .next) {
+  func fetchPokemons(api:PokeAPIClient, fetchMode: FetchMode = .next) {
     Task {
       do {
         let pokemonList = try await api.fetchPokemonList(fetchMode == .next ? self.next : self.previous)

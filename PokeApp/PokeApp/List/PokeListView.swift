@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PokeListView: View {
+  @EnvironmentObject var api: PokeAPIClient
   @ObservedObject var viewModel: PokemonListModel = PokemonListModel()
 
   var body: some View {
@@ -21,13 +22,13 @@ struct PokeListView: View {
         .safeAreaInset(edge: .bottom) {
           HStack {
             Button {
-              viewModel.fetchPokemons(.previous)
+              viewModel.fetchPokemons(api: api, fetchMode: .previous)
             } label: {
               Text("Previous")
             }
             Spacer()
             Button {
-              viewModel.fetchPokemons(.next)
+              viewModel.fetchPokemons(api: api, fetchMode: .next)
             } label: {
               Text("Next")
             }
@@ -39,7 +40,7 @@ struct PokeListView: View {
       .navigationBarTitle("Pokemons")
     }
     .onAppear() {
-      viewModel.fetchPokemons()
+      viewModel.fetchPokemons(api: api)
     }
   }
 }

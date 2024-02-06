@@ -9,10 +9,9 @@ import SwiftUI
 
 class PokeListCellViewModel: ObservableObject {
   @Published var pokemon: Pokemon?
-  var api: PokeAPIClient = PokeAPIClient()
 
   @MainActor
-  func fetchPokemonData(for url: String? ) {
+  func fetchPokemonData(api: PokeAPIClient, for url: String? ) {
     Task {
       do {
         let pokemon = try await api.fetchPokemonDetail(url ?? "")

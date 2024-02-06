@@ -9,6 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct PokeListCell: View {
+  @EnvironmentObject var api: PokeAPIClient
   @ObservedObject var viewModel: PokeListCellViewModel = PokeListCellViewModel()
   var url: String?
 
@@ -24,7 +25,7 @@ struct PokeListCell: View {
         Spacer()
       }
       .onAppear {
-        viewModel.fetchPokemonData(for: url)
+        viewModel.fetchPokemonData(api: api, for: url)
       }
     }
   }
