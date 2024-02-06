@@ -16,8 +16,40 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "fetchPokemons()"
+            landmarkName = "fetchPokemons(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6586DD06-B718-4094-991C-A74E1BAC8B51 - 27b10c7b9b35e447"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokemonListModel.fetchPokemons() -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/PokeListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "6586DD06-B718-4094-991C-A74E1BAC8B51 - 881276881c2044ce"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokemonListModel.fetchPokemons(PokeApp.PokemonListModel.FetchMode) -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/PokeListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

@@ -22,20 +22,48 @@ final class PokeAppUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
-        app.launch()
+    func testGoIntoDetail() throws {
+      // UI tests must launch the application that they test.
+      let app = XCUIApplication()
+      app.launch()
+      let elementsQuery = XCUIApplication().scrollViews.otherElements
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+      // Check if first screen elements are present.
+      let bulbasaurInList = elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["Bulbasaur"]/*[[".buttons[\"Bulbasaur\"].staticTexts[\"Bulbasaur\"]",".staticTexts[\"Bulbasaur\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+      XCTAssertTrue(bulbasaurInList.exists)
+
+      // Tap list element
+      bulbasaurInList.tap()
+
+      // Check if detail is displayed
+      let bulbasaurInDetail = elementsQuery.staticTexts["Name: bulbasaur"]
+      XCTAssertTrue(bulbasaurInDetail.exists)
     }
 
-    func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
-            // This measures how long it takes to launch your application.
-            measure(metrics: [XCTApplicationLaunchMetric()]) {
-                XCUIApplication().launch()
-            }
-        }
-    }
+  func testGoNextAndGoPrevious() throws {
+    let app = XCUIApplication()
+    app.launch()
+    let elementsQuery = XCUIApplication().scrollViews.otherElements
+    let ele1 =  elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["Bulbasaur"]/*[[".buttons[\"Bulbasaur\"].staticTexts[\"Bulbasaur\"]",".staticTexts[\"Bulbasaur\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    let ele2 =  elementsQuery/*@START_MENU_TOKEN@*/.staticTexts["Spearow"]/*[[".buttons[\"Spearow\"].staticTexts[\"Spearow\"]",".staticTexts[\"Spearow\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+    
+    //Check if first screen is present
+    XCTAssertTrue(ele1.exists)
+    XCTAssertFalse(ele2.exists)
+
+    // press next button
+    app.buttons["Next"].tap()
+    
+    // Check if element in second list are being displayed
+    XCTAssertTrue(ele2.exists)
+    XCTAssertFalse(ele1.exists)
+
+    // press previous
+    app.buttons["Previous"].tap()
+
+    //Check if first screen is present
+    XCTAssertTrue(ele1.exists)
+    XCTAssertFalse(ele2.exists)
+
+  }
 }
