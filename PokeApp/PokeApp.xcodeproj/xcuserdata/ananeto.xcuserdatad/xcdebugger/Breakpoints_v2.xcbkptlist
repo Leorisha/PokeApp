@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "ECC04E70-E93A-4866-8485-B01031E9DDE3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6586DD06-B718-4094-991C-A74E1BAC8B51"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeApp/List/PokeListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "fetchPokemons()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01937E1A-E5CD-4FE1-9B61-D81B25B73CE9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PokeApp/List/Cell/PokeListCellViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "fetchPokemonData(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "01937E1A-E5CD-4FE1-9B61-D81B25B73CE9 - a4d9b411d234dec6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokeListCellViewModel.fetchPokemonData(for: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/Cell/PokeListCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "01937E1A-E5CD-4FE1-9B61-D81B25B73CE9 - 5c252915a7a81c05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokeListCellViewModel.fetchPokemonData(for: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/Cell/PokeListCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "01937E1A-E5CD-4FE1-9B61-D81B25B73CE9 - fa51a91bf6191244"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokeListCellViewModel.fetchPokemonData(for: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/Cell/PokeListCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "72">
+               </Location>
+               <Location
+                  uuid = "01937E1A-E5CD-4FE1-9B61-D81B25B73CE9 - 1f15ab9e08747385"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokeListCellViewModel.fetchPokemonData(for: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/Cell/PokeListCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "01937E1A-E5CD-4FE1-9B61-D81B25B73CE9 - 5c252915a7a81c05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokeListCellViewModel.fetchPokemonData(for: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/Cell/PokeListCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "01937E1A-E5CD-4FE1-9B61-D81B25B73CE9 - fa51a91bf6191244"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in PokeApp.PokeListCellViewModel.fetchPokemonData(for: Swift.Optional&lt;Swift.String&gt;) -&gt; ()"
+                  moduleName = "PokeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ananeto/Documents/GIT/IOS/PokeApp/PokeApp/PokeApp/List/Cell/PokeListCellViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
