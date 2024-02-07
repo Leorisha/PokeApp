@@ -25,6 +25,7 @@
 		C2E9BC562B72F84A00D9FDF2 /* PokeApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BC552B72F84A00D9FDF2 /* PokeApiClientTests.swift */; };
 		C2E9BC582B72F89300D9FDF2 /* fetchList.json in Resources */ = {isa = PBXBuildFile; fileRef = C2E9BC572B72F89300D9FDF2 /* fetchList.json */; };
 		C2E9BC5B2B72F9F400D9FDF2 /* NetworkMockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BC5A2B72F9F400D9FDF2 /* NetworkMockClasses.swift */; };
+		C2E9BC5D2B7306FF00D9FDF2 /* PokeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BC5C2B7306FF00D9FDF2 /* PokeDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C2E9BC552B72F84A00D9FDF2 /* PokeApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApiClientTests.swift; sourceTree = "<group>"; };
 		C2E9BC572B72F89300D9FDF2 /* fetchList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fetchList.json; sourceTree = "<group>"; };
 		C2E9BC5A2B72F9F400D9FDF2 /* NetworkMockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockClasses.swift; sourceTree = "<group>"; };
+		C2E9BC5C2B7306FF00D9FDF2 /* PokeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				C2E9BC4D2B72D66700D9FDF2 /* PokeDetailView.swift */,
+				C2E9BC5C2B7306FF00D9FDF2 /* PokeDetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				C2E9BC122B72BF6200D9FDF2 /* PokeListView.swift in Sources */,
 				C2E9BC432B72C59300D9FDF2 /* PokeListViewModel.swift in Sources */,
 				C2E9BC4E2B72D66700D9FDF2 /* PokeDetailView.swift in Sources */,
+				C2E9BC5D2B7306FF00D9FDF2 /* PokeDetailViewModel.swift in Sources */,
 				C2E9BC4C2B72D65000D9FDF2 /* PokeListCell.swift in Sources */,
 				C2E9BC102B72BF6200D9FDF2 /* PokeAppApp.swift in Sources */,
 				C2E9BC3C2B72C23800D9FDF2 /* Pokemon.swift in Sources */,

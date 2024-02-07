@@ -118,7 +118,7 @@ class PokeAPIClientTests: XCTestCase {
 
     // Assert
     XCTAssertEqual(result.name, "ditto")
-    XCTAssertEqual(result.height, "3")
+    XCTAssertEqual(result.height, 3)
   }
 
 }
