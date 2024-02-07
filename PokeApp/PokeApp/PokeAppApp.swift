@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct PokeAppApp: App {
 
-  let apiClient = PokeAPIClient()
+  let apiClient = PokeAPIClient(session: URLSession.shared, decoder: JSONDecoder())
   var body: some Scene {
     WindowGroup {
       PokeListView()

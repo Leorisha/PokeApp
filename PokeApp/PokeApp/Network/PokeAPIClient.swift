@@ -12,33 +12,30 @@ class PokeAPIClient: ObservableObject {
 
   static var baseURL: String = "https://pokeapi.co/api/v2/pokemon"
 
-  func fetchPokemonList(_ url: String) async throws -> PokemonList {
-    guard let url = URL(string: url) else { throw URLError(.badURL) }
+  let session: URLSession
+  let decoder: JSONDecoder
 
-    do {
-      let (data, _) = try await URLSession.shared.data(from: url)
-      let decoder = try JSONDecoder().decode(PokemonList.self, from: data)
-      return decoder
-    } catch {
-      throw error
-    }
+  init(session: URLSession, decoder: JSONDecoder) {
+      self.session = session
+      self.decoder = decoder
+  }
+
+  private func request<T>(url: String) async throws -> T where T: Decodable {
+      guard let url = URL(string: url) else { throw URLError(.badURL) }
+      let (data, _) = try await session.data(from: url)
+      return try decoder.decode(T.self, from: data)
+  }
+  func fetchPokemonList(_ url: String) async throws -> PokemonList {
+    return try await request(url: url)
   }
 
   func fetchPokemonDetail(_ url: String) async throws -> Pokemon {
-    guard let url = URL(string: url) else { throw URLError(.badURL) }
-
-    do {
-      let (data, _) = try await URLSession.shared.data(from: url)
-      let decoder = try JSONDecoder().decode(Pokemon.self, from: data)
-      return decoder
-    } catch {
-      throw error
-    }
+    return try await request(url: url)
   }
 }
 
 private struct PokeAPIClientKey: EnvironmentKey {
-    static let defaultValue: PokeAPIClient = PokeAPIClient()
+  static let defaultValue: PokeAPIClient = PokeAPIClient(session: URLSession.shared, decoder: JSONDecoder())
 }
 
 extension EnvironmentValues {

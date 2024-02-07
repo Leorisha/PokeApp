@@ -22,6 +22,9 @@
 		C2E9BC4E2B72D66700D9FDF2 /* PokeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BC4D2B72D66700D9FDF2 /* PokeDetailView.swift */; };
 		C2E9BC512B72D7EA00D9FDF2 /* PokeListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BC502B72D7EA00D9FDF2 /* PokeListCellViewModel.swift */; };
 		C2E9BC542B72D9C000D9FDF2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C2E9BC532B72D9C000D9FDF2 /* Kingfisher */; };
+		C2E9BC562B72F84A00D9FDF2 /* PokeApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BC552B72F84A00D9FDF2 /* PokeApiClientTests.swift */; };
+		C2E9BC582B72F89300D9FDF2 /* fetchList.json in Resources */ = {isa = PBXBuildFile; fileRef = C2E9BC572B72F89300D9FDF2 /* fetchList.json */; };
+		C2E9BC5B2B72F9F400D9FDF2 /* NetworkMockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E9BC5A2B72F9F400D9FDF2 /* NetworkMockClasses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +62,9 @@
 		C2E9BC4B2B72D65000D9FDF2 /* PokeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeListCell.swift; sourceTree = "<group>"; };
 		C2E9BC4D2B72D66700D9FDF2 /* PokeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDetailView.swift; sourceTree = "<group>"; };
 		C2E9BC502B72D7EA00D9FDF2 /* PokeListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeListCellViewModel.swift; sourceTree = "<group>"; };
+		C2E9BC552B72F84A00D9FDF2 /* PokeApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeApiClientTests.swift; sourceTree = "<group>"; };
+		C2E9BC572B72F89300D9FDF2 /* fetchList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = fetchList.json; sourceTree = "<group>"; };
+		C2E9BC5A2B72F9F400D9FDF2 /* NetworkMockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockClasses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +138,9 @@
 		C2E9BC1F2B72BF6300D9FDF2 /* PokeAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9BC592B72F9E300D9FDF2 /* Network */,
 				C2E9BC202B72BF6300D9FDF2 /* PokeAppTests.swift */,
+				C2E9BC572B72F89300D9FDF2 /* fetchList.json */,
 			);
 			path = PokeAppTests;
 			sourceTree = "<group>";
@@ -188,6 +196,15 @@
 				C2E9BC502B72D7EA00D9FDF2 /* PokeListCellViewModel.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		C2E9BC592B72F9E300D9FDF2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9BC552B72F84A00D9FDF2 /* PokeApiClientTests.swift */,
+				C2E9BC5A2B72F9F400D9FDF2 /* NetworkMockClasses.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E9BC582B72F89300D9FDF2 /* fetchList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +360,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E9BC5B2B72F9F400D9FDF2 /* NetworkMockClasses.swift in Sources */,
+				C2E9BC562B72F84A00D9FDF2 /* PokeApiClientTests.swift in Sources */,
 				C2E9BC212B72BF6300D9FDF2 /* PokeAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
