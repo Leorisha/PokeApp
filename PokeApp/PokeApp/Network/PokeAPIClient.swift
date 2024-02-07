@@ -57,7 +57,7 @@ class PokeAPIClient: ObservableObject {
       }
 
       do {
-        let (data, _) = try await URLSession.shared.data(for: request)
+        let (data, _) = try await session.data(for: request)
           if let responseString = String(data: data, encoding: .utf8) {
               print("Webhook response: \(responseString)")
           }
