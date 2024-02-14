@@ -68,15 +68,3 @@ class PokeAPIClient: ObservableObject {
       }
   }
 }
-
-private struct PokeAPIClientKey: EnvironmentKey {
-  static let defaultValue: PokeAPIClient = PokeAPIClient(session: URLSession.shared, decoder: JSONDecoder())
-}
-
-extension EnvironmentValues {
-    var pokeAPIClient: PokeAPIClient {
-        get { self[PokeAPIClientKey.self] }
-        set { self[PokeAPIClientKey.self] = newValue }
-    }
-}
-
